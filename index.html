@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ryan Gray" />
+  <title>Ryan Gray’s Projects</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style type="text/css">
+
+
+body
+{
+max-width: 60em;
+margin-left: auto;
+margin-right: auto;
+padding-left: 0.5em;
+padding-right: 0.5em;
+}
+
+
+div#header, header
+{
+
+border-bottom: 1px solid #aaa;
+margin-bottom: 0.5em;
+}
+.title 
+{
+text-align: center;
+font-size: 220%; 
+font-family: "Liberation Serif", "Georgia", "Times New Roman", serif; 
+}
+.subtitle 
+{
+text-align: center;
+font-size: 120%;
+font-style: italic;
+}
+.author, .date 
+{
+text-align: center;
+}
+
+.abstract
+{
+margin-left: auto;
+margin-right: auto;
+padding-left: 2em;
+padding-right: 2em;
+margin-bottom: 0.5em;
+text-align: justify;
+font-style: italic;
+font-size: 90%;
+}
+.abstract-title 
+{
+font-style: normal;
+font-weight: bold;
+text-align: center;
+margin-left: inherit; 
+margin-bottom: 1em;
+margin-top: 1.4em;
+}
+
+div#TOC, nav#TOC
+{
+
+border-bottom: 1px solid #aaa;
+margin-bottom: 0.5em;
+font-size: 90%;
+}
+@media print
+{
+div#TOC, nav#TOC
+{
+
+display: none;
+}
+}
+
+h1, h2, h3, h4, h5, h6
+{
+font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Calibri, Arial, sans-serif; 
+
+page-break-after: avoid; 
+}
+
+h1 {
+
+margin-block-start: 0.844em; 
+margin-block-end: 0.563em; 
+}
+h2 {
+
+margin-block-start: 1.125em; 
+margin-block-end: 0.75em; 
+}
+h3 {
+
+margin-block-start: 1.442em; 
+margin-block-end: 0.962em; 
+}
+h4 {
+
+margin-block-start: 1.688em; 
+margin-block-end: 1.125em; 
+}
+h5 {
+
+
+
+font-size: 100%;
+margin-block-start: 1.688em; 
+margin-block-end: 1.125em; 
+font-style: italic;
+}
+h6 {
+
+
+
+font-size: 100%;
+margin-block-start: 1.688em; 
+margin-block-end: 1.125em; 
+font-style: italic;
+font-weight: normal;
+}
+
+div div, section section 
+{
+margin-left: 1.5em; 
+}
+p {}
+blockquote
+{ font-style: italic;
+}
+li 
+{
+}
+li > p 
+{
+margin-top: 1em; 
+}
+ul 
+{
+padding-left: 2em; 
+}
+ul li 
+{
+}
+ol 
+{
+padding-left: 2em; 
+}
+ol li 
+{
+}
+hr 
+{
+border: none;
+height: 1pt;
+background: none;
+border-top: 1pt solid #333;
+}
+
+sub 
+{
+}
+sup 
+{
+}
+em 
+{
+}
+em > em 
+{
+font-style: normal;
+}
+strong 
+{
+}
+
+a 
+{
+}
+
+@media screen
+{
+a {
+text-decoration: underline dotted; 
+}
+#TOC a 
+{
+text-decoration: none;
+border-bottom: inherit;
+}
+a:hover
+{
+text-decoration: underline solid blue; / * Hover emphasizes */
+}
+
+a img
+{
+text-decoration: none;
+border: 1px solid white;
+}
+a img:hover {
+text-decoration: none;
+border: 1px dotted blue;
+}
+}
+@media print
+{
+a {
+
+text-decoration: none;
+color: inherit;
+}
+a[href^="http://"]:after, a[href^="https://"]:after
+{
+
+content: " (" attr(href) ") ";
+font-size: 90%;
+}
+}
+
+img
+{
+
+vertical-align: middle;
+}
+@media print
+{
+img
+{
+
+max-height: 8.5in;
+max-width: 6.5in;
+}
+}
+div.figure, figure 
+{
+
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-style: italic;
+font-size: small;
+}
+p.caption, figcaption 
+{
+
+}
+
+pre, code {
+
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+
+
+code
+{
+background-color: #E8E8E8;
+}
+
+pre, pre > code
+{
+background-color: #E8E8E8;
+}
+pre 
+{
+
+padding: 0.5em; 
+border-radius: 5px; 
+
+border: 1px solid #aaa;
+
+margin-left: 0.5em;
+margin-right: 0.5em;
+}
+@media screen
+{
+pre
+{
+
+border: none;
+box-shadow: inset 1px 1px 3px #b0b0b0;
+}
+pre, pre > code
+{
+
+white-space: pre;
+word-wrap: normal;
+overflow: auto;
+}
+}
+code 
+{
+
+padding-left: 0.3em;
+padding-right: 0.3em;
+padding-top: 0.1em;
+padding-bottom: 0.1em;
+border-radius: 3px;
+}
+@media screen
+{
+code
+{
+box-shadow: inset 0px 0px 2px #b0b0b0;
+}
+}
+pre > code 
+{
+
+padding: 0;
+border: none;
+border-radius: none;
+background-color: inherit;
+box-shadow: none;
+}
+code.url 
+{
+background-color: inherit; 
+box-shadow: none;
+}
+
+
+span.math 
+{
+}
+span.math.inline 
+{
+}
+span.math.display 
+{
+}
+span.LaTeX 
+{
+} eq 
+{
+} 
+
+table
+{
+border-collapse: collapse;
+border-spacing: 0; 
+border-top: 2pt solid black; 
+border-bottom: 2pt solid black;
+
+margin-left: auto;
+margin-right: auto;
+}
+thead, th 
+{
+
+border-bottom: 1pt solid black;
+background-color: #E8E8E8;
+}
+tr.header 
+{
+} tbody 
+{
+}
+
+tr {
+}
+
+tr.odd {}
+tr.even {}
+tr.odd:hover, tr.even:hover 
+{
+background-color: #E0E0E0;
+}
+td, th 
+{ vertical-align: top; 
+vertical-align: baseline; 
+padding-left: 0.5em;
+padding-right: 0.5em;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+}
+
+
+th 
+{
+font-weight: bold; }
+tfoot 
+{
+}
+caption 
+{
+caption-side: top;
+border: none;
+font-size: 0.9em;
+font-style: italic;
+text-align: center;
+margin-top: 0.5em;
+margin-bottom: 0.3em;
+padding-bottom: 0.2em;
+}
+
+dl 
+{
+border-top: 2pt solid #888;
+padding-top: 0.5em;
+border-bottom: 2pt solid #888;
+}
+dt 
+{
+font-weight: bold;
+}
+dd+dt 
+{
+border-top: 1pt solid #888;
+padding-top: 0.5em;
+}
+dd 
+{
+margin-bottom: 0.5em;
+}
+dd+dd 
+{
+border-top: 1px solid #888; 
+}
+
+a.footnote, a.footnoteRef { 
+font-size: small; vertical-align: text-top;
+}
+a[href^="#fnref"], a.reversefootnote 
+{
+}
+@media print
+{
+a[href^="#fnref"], a.reversefootnote 
+{
+
+display: none;
+}
+}
+.footnotes 
+{
+}
+.footnotes>ol>li[id^="fn"] 
+{
+}
+
+.footnotes > hr
+{
+margin-top: 1em;
+border-top: double;
+border-color: #303030;
+border-width: 3pt;
+text-align: center;
+}
+
+
+@media screen
+{
+.noscreen 
+{
+display: none;
+}
+}
+@media print
+{
+.noprint 
+{
+display:none;
+}
+}
+.block-center
+{
+margin-left: auto;
+margin-right: auto;
+display: table;
+}
+.text-center
+{
+text-align: center;
+}
+.block-right
+{
+margin-left: auto;
+margin-right: 0;
+display: table;
+}
+.text-right
+{
+text-align: right;
+}
+.block-left
+{
+margin-left: 0;
+margin-right: auto;
+display: table;
+}
+.text-left
+{
+text-align: left;
+}
+
+@media screen
+{
+img.shadow 
+{
+box-shadow: 3px 3px 5px #b0b0b0;
+}
+}
+@media print
+{
+img.shadow
+{
+box-shadow: 3px 3px 0px #b0b0b0;
+}
+}
+img.pad 
+{
+padding: 10px;
+}
+img.rounded 
+{
+border-radius: 10px;
+}
+img.border 
+{
+border: 1pt solid #c0c0c0;
+}
+img.well
+{
+box-shadow: 0px 0px 5px #b0b0b0 inset;
+}
+img.right 
+{
+float: right;
+clear: right;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+img.left 
+{
+float: left;
+clear: left;
+margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+div.figure img, figure img 
+{
+float: none; 
+clear: both;
+}
+img.top
+{
+vertical-align: top;
+}
+img.bottom
+{
+vertical-align: bottom;
+}
+img.middle
+{
+vertical-align: middle;
+}
+img.baseline
+{
+vertical-align: baseline;
+}
+img.margin 
+{
+margin-left: 10px;
+margin-right: 10px;
+}
+
+img.max100
+{
+max-width: 100%;
+}
+img.max95 
+{
+max-width: 95%;
+}
+img.max50
+{
+max-width: 50%;
+}
+img.max45 
+{
+max-width: 45%;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Ryan Gray’s Projects</h1>
+<p class="author">Ryan Gray</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contents</h2>
+<ul>
+<li><a href="#retrocomputing">Retrocomputing</a>
+<ul>
+<li><a href="#sinclairtimex">Sinclair/Timex</a>
+<ul>
+<li><a href="#zmakebas"><span>Zmakebas</span></a></li>
+<li><a href="#sinclair-zx81-timex-sinclair-1000-and-1500">Sinclair ZX81,
+Timex Sinclair 1000 and 1500</a></li>
+<li><a href="#sinclair-zx-spectrum-timex-sinclair-2068">Sinclair ZX
+Spectrum, Timex Sinclair 2068</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#matlab">MATLAB</a></li>
+</ul>
+</nav>
+<section id="retrocomputing" class="level1">
+<h1>Retrocomputing</h1>
+<section id="sinclairtimex" class="level2">
+<h2>Sinclair/Timex</h2>
+<p>When I started to recover my old Sinclair files, I also got into the
+emulator scene, and started to work on some utilities for the virtual
+tape formats.</p>
+<section id="zmakebas" class="level3">
+<h3><a href="https://github.com/ryangray/zmkakebas">Zmakebas</a></h3>
+<p>I have a fork of this utility that converts Sinclair BASIC source
+from text files to .p or .tap for the ZX81/TS100 and Spectrum/TS2068.
+This is just for pushing bug fixes and maybe enhancements to the
+upstream project. Several of my utilities produce output intended to be
+used with it.</p>
+</section>
+<section id="sinclair-zx81-timex-sinclair-1000-and-1500" class="level3">
+<h3>Sinclair ZX81, Timex Sinclair 1000 and 1500</h3>
+<p>The Sinclair ZX81 was the first computer I owned. Up to that point, I
+used TRS-80 Model I computers at the school and various other Apple II,
+Atari, TI, and others that friends had. Mine is a relatively rare US
+version that they sold by mail order in the States before Timex sold the
+co-branded TS1000.</p>
+<p>I only had it about a year and a half before I got my TS2068 the
+following Christmas. I did quite a bit on it though as I continued to
+use it some after I got the new computer. I was also a member of the
+Fort Worth TS user group for a few years during this time.</p>
+<section id="emulator-p-file-utilities" class="level4">
+<h4>Emulator P file utilities</h4>
+<ul>
+<li><p><a href="https://github.com/ryangray/zx81-utils">zx81-utils</a></p>
+<p>Several command line programs to work with programs in the common .p
+file emulator format. A few also work with the .tap format for
+Spectrum/2068 programs. Many are designed to work with the popular
+[Zmakebas][] utility by generating BASIC code in text files designed to
+be used by Zmakebas to convert to a .p (or .tap) file.</p>
+<ul>
+<li><strong>p2txt</strong> - Extracts the BASIC program text from a .p
+file in a few formats.</li>
+<li><strong>p2speccy</strong> - Converts the BASIC program in a .p file
+to a ZX Spectrum BASIC program in a text file that can be converted to
+.tap with zmakebas.</li>
+<li><strong>hex2rem</strong> - Convert a hex or binary file to a REM
+statement in a text file that can be converted with zmakebas.</li>
+<li><strong>rem2bin</strong> - Extracts the machine code in the first
+line REM statement into a binary or hex file.</li>
+<li><strong>hex2tap</strong> - Like <em>hex2rem</em> but it outputs the
+bytes as a Spectrum/TS2068 CODE segment in a .tap file.</li>
+<li><strong>tapauto</strong> - Disable or modify the autostart setting
+of a program in a .tap file.</li>
+<li><strong>p2ts1510</strong> - This is for converting the program in a
+.p file into a ROM image formatted for the Timex 1510 cartridge adapter
+or one of its clones.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="sinclair-zx-spectrum-timex-sinclair-2068" class="level3">
+<h3>Sinclair ZX Spectrum, Timex Sinclair 2068</h3>
+<p>As I had continue to use my ZX81 for a time after I got my TS2068, I
+used my TS2068 for a time after I got my IBM PCjr since it took a while
+until I had learned the new system and had enough software to use it
+well.</p>
+<p>During a break between my undergraduate and graduate degrees, I
+revisited the Sinclair machines to work on machine code and write a
+game.</p>
+<section id="my-original-basic-programs" class="level4">
+<h4>My Original BASIC Programs</h4>
+<p>I recovered many of the BASIC programs I wrote decades ago for my
+Timex Sinclair 2068 computer, some of which were interesting enough to
+put here, and some I continue to work on.</p>
+<ul>
+<li><p><a href="https://github.com/ryangray/quickfont">QuickFont</a></p>
+<p>A font editor for user-defined fonts. This was an early program I
+wrote the first version of, then enhanced it later after making a UDG
+editor that emulated the Mac graphical user interface that was new at
+the time. The new version borrowed most of the look but dropped the
+joystick-driven pointer operation and drop-down menus.</p>
+<p>There was never a standard for a memory location for the fonts, so I
+just reserved the 768 bytes below the UDG characters at the top of
+memory. You can always load the fonts to the location of your
+choice.</p>
+<p>Once I recovered this program from my old tapes, I almost immediately
+began to modify it to speed up and enhance it in the ways I never got
+around to back then. I’ve since sped up some things with machine code,
+and made a version that runs under the OS-64 system.</p></li>
+<li><p>Thief (coming soon)</p>
+<p>A game inspired by Lode Runner but is way simpler and you play
+against the clock. There are 6 levels, and there is a built-in level
+creator.</p></li>
+</ul>
+</section>
+<section id="ts-pico-commander" class="level4">
+<h4><a href="https://github.com/ryangray/ts-pico-commander">TS-Pico
+Commander</a></h4>
+<p>Some members of the <a href="https://www.timexsinclair.com/community/">Time Sinclair Online
+User Group</a>, of which I am a member, have created some new hardware
+add-ons for the Timex Sinclair systems. One of these is the TS-Pico
+which allows you to save and load programs from an SD card.</p>
+<p>I was asked to make a file manager of sorts for it. The initial
+program is writen in BASIC with a user interface reminiscent of an old
+file commander for DOS. At this point it’s mostly just a way to browse
+the SC card and load programs with a little bit of file management.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="markdown" class="level1">
+<h1>Markdown</h1>
+<p>Things for the popular easy to use text-based markup format.</p>
+<ul>
+<li><p><a href="https://github.com/ryangray/buttondown">Buttondown</a></p>
+<p>A clean stylesheet accomodating HTML generated with Pandoc.</p></li>
+<li><p><a href="https://github.com/ryangray/doodad">doodad</a></p>
+<p>An Apache thing to dynamically render and serve up Markdown
+pages.</p></li>
+</ul>
+</section>
+<section id="matlab" class="level1">
+<h1>MATLAB</h1>
+<p>Stuff for the commercial science and engineering programming tool.
+Much of these will work on the open source GNU Octave as well.</p>
+<ul>
+<li><p><a href="https://github.com/ryangray/matlab-units">matlab_units</a></p>
+<p>A units library for MATLAB that is more intuitive and can change the
+base units as well as use unit objects for checking dimensional
+correctness. This works on Octave except for the unit objects (it
+subclasses the double type).</p></li>
+</ul>
+</section>
+</body>
+</html>
