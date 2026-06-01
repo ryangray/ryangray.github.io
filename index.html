@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ryan Gray" />
+  <title>Ryan Gray’s Projects</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+
+
+body
+{
+max-width: 60em;
+margin-left: auto;
+margin-right: auto;
+padding-left: 0.5em;
+padding-right: 0.5em;
+}
+
+
+div#header, header
+{
+
+border-bottom: 1px solid #aaa;
+margin-bottom: 0.5em;
+}
+.title 
+{
+text-align: center;
+font-size: 220%; 
+font-family: "Liberation Serif", "Georgia", "Times New Roman", serif; 
+}
+.subtitle 
+{
+text-align: center;
+font-size: 120%;
+font-style: italic;
+}
+.author, .date 
+{
+text-align: center;
+}
+
+.abstract
+{
+margin-left: auto;
+margin-right: auto;
+padding-left: 2em;
+padding-right: 2em;
+margin-bottom: 0.5em;
+text-align: justify;
+font-style: italic;
+font-size: 90%;
+}
+.abstract-title 
+{
+font-style: normal;
+font-weight: bold;
+text-align: center;
+margin-left: inherit; 
+margin-bottom: 1em;
+margin-top: 1.4em;
+}
+
+div#TOC, nav#TOC
+{
+
+border-bottom: 1px solid #aaa;
+margin-bottom: 0.5em;
+font-size: 90%;
+}
+@media print
+{
+div#TOC, nav#TOC
+{
+
+display: none;
+}
+}
+
+h1, h2, h3, h4, h5, h6
+{
+font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Calibri, Arial, sans-serif; 
+
+page-break-after: avoid; 
+}
+
+h1 {
+
+margin-block-start: 0.844em; 
+margin-block-end: 0.563em; 
+}
+h2 {
+
+margin-block-start: 1.125em; 
+margin-block-end: 0.75em; 
+}
+h3 {
+
+margin-block-start: 1.442em; 
+margin-block-end: 0.962em; 
+}
+h4 {
+
+margin-block-start: 1.688em; 
+margin-block-end: 1.125em; 
+}
+h5 {
+
+
+
+font-size: 100%;
+margin-block-start: 1.688em; 
+margin-block-end: 1.125em; 
+font-style: italic;
+}
+h6 {
+
+
+
+font-size: 100%;
+margin-block-start: 1.688em; 
+margin-block-end: 1.125em; 
+font-style: italic;
+font-weight: normal;
+}
+
+div div, section section 
+{
+margin-left: 1.5em; 
+}
+p {}
+blockquote
+{ font-style: italic;
+}
+li 
+{
+}
+li > p 
+{
+margin-top: 1em; 
+}
+ul 
+{
+padding-left: 2em; 
+}
+ul li 
+{
+}
+ol 
+{
+padding-left: 2em; 
+}
+ol li 
+{
+}
+hr 
+{
+border: none;
+height: 1pt;
+background: none;
+border-top: 1pt solid #333;
+}
+
+sub 
+{
+}
+sup 
+{
+}
+em 
+{
+}
+em > em 
+{
+font-style: normal;
+}
+strong 
+{
+}
+
+a 
+{
+}
+
+@media screen
+{
+a {
+text-decoration: underline dotted; 
+}
+#TOC a 
+{
+text-decoration: none;
+border-bottom: inherit;
+}
+a:hover
+{
+text-decoration: underline solid blue; / * Hover emphasizes */
+}
+
+a img
+{
+text-decoration: none;
+border: 1px solid white;
+}
+a img:hover {
+text-decoration: none;
+border: 1px dotted blue;
+}
+}
+@media print
+{
+a {
+
+text-decoration: none;
+color: inherit;
+}
+a[href^="http://"]:after, a[href^="https://"]:after
+{
+
+content: " (" attr(href) ") ";
+font-size: 90%;
+}
+}
+
+img
+{
+
+vertical-align: middle;
+}
+@media print
+{
+img
+{
+
+max-height: 8.5in;
+max-width: 6.5in;
+}
+}
+div.figure, figure 
+{
+
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-style: italic;
+font-size: small;
+}
+p.caption, figcaption 
+{
+
+}
+
+pre, code {
+
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+
+
+code
+{
+background-color: #E8E8E8;
+}
+
+pre, pre > code
+{
+background-color: #E8E8E8;
+}
+pre 
+{
+
+padding: 0.5em; 
+border-radius: 5px; 
+
+border: 1px solid #aaa;
+
+margin-left: 0.5em;
+margin-right: 0.5em;
+}
+@media screen
+{
+pre
+{
+
+border: none;
+box-shadow: inset 1px 1px 3px #b0b0b0;
+}
+pre, pre > code
+{
+
+white-space: pre;
+word-wrap: normal;
+overflow: auto;
+}
+}
+code 
+{
+
+padding-left: 0.3em;
+padding-right: 0.3em;
+padding-top: 0.1em;
+padding-bottom: 0.1em;
+border-radius: 3px;
+}
+@media screen
+{
+code
+{
+box-shadow: inset 0px 0px 2px #b0b0b0;
+}
+}
+pre > code 
+{
+
+padding: 0;
+border: none;
+border-radius: none;
+background-color: inherit;
+box-shadow: none;
+}
+code.url 
+{
+background-color: inherit; 
+box-shadow: none;
+}
+
+
+span.math 
+{
+}
+span.math.inline 
+{
+}
+span.math.display 
+{
+}
+span.LaTeX 
+{
+} eq 
+{
+} 
+
+table
+{
+border-collapse: collapse;
+border-spacing: 0; 
+border-top: 2pt solid black; 
+border-bottom: 2pt solid black;
+
+margin-left: auto;
+margin-right: auto;
+}
+thead, th 
+{
+
+border-bottom: 1pt solid black;
+background-color: #E8E8E8;
+}
+tr.header 
+{
+} tbody 
+{
+}
+
+tr {
+}
+
+tr.odd {}
+tr.even {}
+tr.odd:hover, tr.even:hover 
+{
+background-color: #E0E0E0;
+}
+td, th 
+{ vertical-align: top; 
+vertical-align: baseline; 
+padding-left: 0.5em;
+padding-right: 0.5em;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+}
+
+
+th 
+{
+font-weight: bold; }
+tfoot 
+{
+}
+caption 
+{
+caption-side: top;
+border: none;
+font-size: 0.9em;
+font-style: italic;
+text-align: center;
+margin-top: 0.5em;
+margin-bottom: 0.3em;
+padding-bottom: 0.2em;
+}
+
+dl 
+{
+border-top: 2pt solid #888;
+padding-top: 0.5em;
+border-bottom: 2pt solid #888;
+}
+dt 
+{
+font-weight: bold;
+}
+dd+dt 
+{
+border-top: 1pt solid #888;
+padding-top: 0.5em;
+}
+dd 
+{
+margin-bottom: 0.5em;
+}
+dd+dd 
+{
+border-top: 1px solid #888; 
+}
+
+a.footnote, a.footnoteRef { 
+font-size: small; vertical-align: text-top;
+}
+a[href^="#fnref"], a.reversefootnote 
+{
+}
+@media print
+{
+a[href^="#fnref"], a.reversefootnote 
+{
+
+display: none;
+}
+}
+.footnotes 
+{
+}
+.footnotes>ol>li[id^="fn"] 
+{
+}
+
+.footnotes > hr
+{
+margin-top: 1em;
+border-top: double;
+border-color: #303030;
+border-width: 3pt;
+text-align: center;
+}
+
+
+@media screen
+{
+.noscreen 
+{
+display: none;
+}
+}
+@media print
+{
+.noprint 
+{
+display:none;
+}
+}
+.block-center
+{
+margin-left: auto;
+margin-right: auto;
+display: table;
+}
+.text-center
+{
+text-align: center;
+}
+.block-right
+{
+margin-left: auto;
+margin-right: 0;
+display: table;
+}
+.text-right
+{
+text-align: right;
+}
+.block-left
+{
+margin-left: 0;
+margin-right: auto;
+display: table;
+}
+.text-left
+{
+text-align: left;
+}
+
+@media screen
+{
+img.shadow 
+{
+box-shadow: 3px 3px 5px #b0b0b0;
+}
+}
+@media print
+{
+img.shadow
+{
+box-shadow: 3px 3px 0px #b0b0b0;
+}
+}
+img.pad 
+{
+padding: 10px;
+}
+img.rounded 
+{
+border-radius: 10px;
+}
+img.border 
+{
+border: 1pt solid #c0c0c0;
+}
+img.well
+{
+box-shadow: 0px 0px 5px #b0b0b0 inset;
+}
+img.right 
+{
+float: right;
+clear: right;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+img.left 
+{
+float: left;
+clear: left;
+margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+div.figure img, figure img 
+{
+float: none; 
+clear: both;
+}
+img.top
+{
+vertical-align: top;
+}
+img.bottom
+{
+vertical-align: bottom;
+}
+img.middle
+{
+vertical-align: middle;
+}
+img.baseline
+{
+vertical-align: baseline;
+}
+img.margin 
+{
+margin-left: 10px;
+margin-right: 10px;
+}
+
+img.max100
+{
+max-width: 100%;
+}
+img.max95 
+{
+max-width: 95%;
+}
+img.max50
+{
+max-width: 50%;
+}
+img.max45 
+{
+max-width: 45%;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Ryan Gray’s Projects</h1>
+<p class="author">Ryan Gray</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contents</h2>
+<ul>
+<li><a href="#retrocomputing" id="toc-retrocomputing">Retrocomputing</a>
+<ul>
+<li><a href="#sinclairtimex" id="toc-sinclairtimex">Sinclair/Timex</a>
+<ul>
+<li><a href="#sinclair-zx81-timex-sinclair-1000-and-1500" id="toc-sinclair-zx81-timex-sinclair-1000-and-1500">Sinclair ZX81, Timex
+Sinclair 1000 and 1500</a></li>
+<li><a href="#sinclair-zx-spectrum-timex-sinclair-2068" id="toc-sinclair-zx-spectrum-timex-sinclair-2068">Sinclair ZX Spectrum,
+Timex Sinclair 2068</a></li>
+<li><a href="#articles-posted-on-the-timex-sinclair-2068-group-on-groups.io" id="toc-articles-posted-on-the-timex-sinclair-2068-group-on-groups.io">Articles
+posted on the Timex Sinclair 2068 group on groups.io</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#markdown" id="toc-markdown">Markdown</a></li>
+<li><a href="#matlab" id="toc-matlab">MATLAB</a></li>
+</ul>
+</nav>
+<p>My GitHub for all my projects is <a href="https://github.com/ryangray" class="uri">https://github.com/ryangray</a></p>
+<section id="retrocomputing" class="level1">
+<h1>Retrocomputing</h1>
+<section id="sinclairtimex" class="level2">
+<h2>Sinclair/Timex</h2>
+<p>When I started to recover my old Sinclair files, I also got into the
+emulator scene, and started to work on some utilities for the virtual
+tape formats.</p>
+<section id="sinclair-zx81-timex-sinclair-1000-and-1500" class="level3">
+<h3>Sinclair ZX81, Timex Sinclair 1000 and 1500</h3>
+<p>The Sinclair ZX81 was the first computer I owned. Up to that point, I
+used TRS-80 Model I computers at the school and various other Apple II,
+Atari, TI, and others that friends had. Mine is a relatively rare US
+version that they sold by mail order in the States before Timex sold the
+co-branded TS1000.</p>
+<p>I only had it about a year and a half before I got my TS2068 the
+following Christmas. I did quite a bit on it though as I continued to
+use it some after I got the new computer. I was also a member of the
+Fort Worth TS user group for a few years during this time.</p>
+<section id="zx81-utils" class="level4">
+<h4>Emulator P file (and .tap file) utilities</h4>
+<ul>
+<li><p><a href="https://github.com/ryangray/zx81-utils">zx81-utils</a></p>
+<p>Several command line programs to work with programs in the common .p
+file emulator format. A few also work with the .tap format for
+Spectrum/2068 programs. Many are designed to work with the popular <a href="https://github.com/chris-y/zmakebas">Zmakebas</a> utility by
+generating BASIC code in text files designed to be used by Zmakebas to
+convert to a .p (or .tap) file.</p>
+<ul>
+<li><strong>p2txt</strong> - Extracts the BASIC program text from a .p
+file in a few formats.</li>
+<li><strong>p2speccy</strong> - Converts the BASIC program in a .p file
+to a ZX Spectrum BASIC program in a text file that can be converted to
+.tap with zmakebas.</li>
+<li><strong>hex2rem</strong> - Convert a hex or binary file to a REM
+statement in a text file that can be converted with zmakebas.</li>
+<li><strong>rem2bin</strong> - Extracts the machine code in the first
+line REM statement into a binary or hex file.</li>
+<li><strong>hex2tap</strong> - Like <em>hex2rem</em> but it outputs the
+bytes as a Spectrum/TS2068 CODE segment in a .tap file.</li>
+<li><strong>tapauto</strong> - Disable or modify the autostart setting
+of a program in a .tap file.</li>
+<li><strong>p2ts1510</strong> - This is for converting the program in a
+.p file into a ROM image formatted for the Timex 1510 cartridge adapter
+or one of its clones.</li>
+<li><strong>dckls</strong> - List or dump the contents of a TS2068
+Command Cartridge .dck file.</li>
+</ul></li>
+<li><p>TS1510 Cartridge Adapter Emulator P file converter</p>
+<p>Carl Miles made an improved verision of a TS1510 Cartridge Adapter
+clone which uses custom plug-in EPROM boards with a switch to select
+from 4 different program stores on it. His version lets you use 16K
+programs instead of just 8K programs.</p>
+<p>I wrote a utility to convert programs in emulator .P files to an 8 or
+16K ROM image to burn onto the cartridge EPROM. It uses genrally the
+same method of a loader machine code program at address 8192, but it is
+generalized (the originals appear to be specific to each of the four
+original cartridge programs) and loads all of the data from the .P file
+to be more broadly compatible. It doesn’t handle programs that chain
+load another, like some from QuickSilva that had a loader that
+configured their hardware add-on then loaded the next file on the
+tape.</p>
+<p>This program is <code>p2ts1510</code> in my <a href="#zx81-utils">zx81-utils</a> above. A post on ts2068.groups.io is
+<a href="https://ts2068.groups.io/g/main/message/8027">here</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="sinclair-zx-spectrum-timex-sinclair-2068" class="level3">
+<h3>Sinclair ZX Spectrum, Timex Sinclair 2068</h3>
+<p>As I had continue to use my ZX81 for a time after I got my TS2068, I
+used my TS2068 for a time after I got my IBM PCjr since it took a while
+until I had learned the new system and had enough software to use it
+well.</p>
+<p>During a break between my undergraduate and graduate degrees, I
+revisited the Sinclair machines to work on machine code and write a
+game.</p>
+<p>See also: my <a href="#zx81-utils">zx81-utils</a> above as it has
+some utilities involving .tap files.</p>
+<section id="my-original-basic-programs" class="level4">
+<h4>My Original BASIC Programs</h4>
+<p>I recovered many of the BASIC programs I wrote decades ago for my
+Timex Sinclair 2068 computer, some of which were interesting enough to
+put here, and some I continue to work on.</p>
+<ul>
+<li><p><a href="https://github.com/ryangray/quickfont">QuickFont</a></p>
+<p>A font editor for user-defined fonts. This was an early program I
+wrote the first version of, then enhanced it later after making a UDG
+editor that emulated the Mac graphical user interface that was new at
+the time. The new version borrowed most of the look but dropped the
+joystick-driven pointer operation and drop-down menus.</p>
+<p>There was never a standard for a memory location for the fonts, so I
+just reserved the 768 bytes below the UDG characters at the top of
+memory. You can always load the fonts to the location of your
+choice.</p>
+<p>Once I recovered this program from my old tapes, I almost immediately
+began to modify it to speed up and enhance it in the ways I never got
+around to back then. I’ve since sped up some things with machine code,
+and made a version that runs under the OS-64 system.</p></li>
+<li><p><a href="https://github.com/ryangray/thief">Thief</a></p>
+<p>A game inspired by Lode Runner but is way simpler and you play
+against the clock. There are 6 levels, and there is a built-in level
+creator.</p>
+<p>After recovering it, I immediately modified it slightly to fix a few
+things and make it a bit faster. I came back to it later and upgraded it
+to have color using the <a href="#defadd">DEFADD trick</a>.</p></li>
+<li><p><a href="https://github.com/ryangray/ts-calprint">TS2068 Calendar
+Printer</a></p>
+<p>I re-created my calendar printer for the TS2068 from recovering the
+calendar routine and a font it used back in the day. I’ve also given
+examples of how to use Imagemagick to make PDFs from Fuse.</p>
+<ul>
+<li><a href="https://ts2068.groups.io/g/main/message/8907">The 2026
+calendar I made with it</a></li>
+<li><a href="https://ts2068.groups.io/g/main/message/8917">The alternate
+images 2026 calendar</a></li>
+<li><a href="https://ts2068.groups.io/g/main/message/7494">The 2025
+version with a 4-up print example</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="contributions-and-forks-of-other-projects" class="level4">
+<h4>Contributions and Forks of Other Projects</h4>
+<ul>
+<li><p><a href="https://github.com/ryangray/zmmakebas">Zmakebas</a></p>
+<p>I have a fork of this utility that converts Sinclair BASIC source
+from text files to .p or .tap for the ZX81/TS100 and Spectrum/TS2068.
+This is just for pushing bug fixes and maybe enhancements to the
+upstream project. Several of my utilities produce output intended to be
+used with it.</p>
+<p>I’ve contributed several fixes to mainly fix the ZX81 mode, fix the
+<code>ON ERR</code> keyword and add the <code>DELETE</code> keyword. <a href="https://github.com/ohnosec/zmakebas">Tim H.</a> had previously
+added the other TS2068 keywords.</p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/9130"><code>listbasic</code>
+from the FUSE Utilities</a></p>
+<p>I added support for TS2068 BASIC programs to The FUSE utility
+<code>listbasic</code>. There was some support already, but this also
+prevents the T and U UDG characters from becoming <code>SPECTRUM</code>
+and <code>PLAY</code> keywords, it handles <code>DELETE</code> and fixes
+problems with <code>ON ERR</code>. A program option <code>-t</code> is
+added for “Timex” BASIC mode, but it also tries to auto-detect a 2068
+program and turn on the mode for the rest of the program. I’ve yet to
+work on submitting these mods to the original project.</p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/8985">ZX-Spectrumizer
+image converter</a></p>
+<p>I added a monochrome mode to make true monochrome images with black
+ink and for dark colors and white paper for light colors so that images
+will print to the monochrome printer correctly. It’s best to use the
+dithering option with it.</p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/8271">TS2068
+User Manuals with Bookmarks</a></p>
+<p>Made bookmarked versions of the color, high-res, and black and white
+versions of the user manual and added the pages missing from online
+scans of the black and white one.</p></li>
+</ul>
+</section>
+<section id="ts-pico-commander" class="level4">
+<h4><a href="https://github.com/ryangray/ts-pico-commander">TS-Pico
+Commander</a></h4>
+<p>Some members of the <a href="https://www.timexsinclair.com/community/">Time Sinclair Online
+User Group</a>, of which I am a member, have created some new hardware
+add-ons for the Timex Sinclair systems. One of these is the TS-Pico
+which allows you to save and load programs from an SD card.</p>
+<p>I was asked to make a file manager of sorts for it. The initial
+program is writen in BASIC with a user interface reminiscent of an old
+file commander for DOS. At this point it’s mostly just a way to browse
+the SC card and load programs with a little bit of file management.</p>
+</section>
+</section>
+<section id="articles-posted-on-the-timex-sinclair-2068-group-on-groups.io" class="level3">
+<h3>Articles posted on the <a href="https://ts2068.groups.io/g/main">Timex Sinclair 2068 group on
+groups.io</a></h3>
+<section id="general" class="level4">
+<h4>General</h4>
+<ul>
+<li><p><a href="https://ts2068.groups.io/g/main/message/8115">40 Keys:
+Remembering Where Everything Is</a></p>
+<p>A post to maybe give you a way to remeber where most of the keywords
+are on a TS2068.</p></li>
+</ul>
+</section>
+<section id="def-fn" class="level4">
+<h4>DEF FN</h4>
+<ul>
+<li><p><a href="https://ts2068.groups.io/g/main/message/8093">Sinclair
+BASICs: DEF FN, Beginner</a></p>
+<p>An introduction to using DEF FN, a command you may not have really
+used since the Timex manual hardly mentions it.</p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/7917">Recursve
+DEF FN</a></p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/8087">DEF
+FuN</a></p>
+<p>Using <code>DEF FN</code> in a recursive way to create string
+trimming functions.</p></li>
+</ul>
+</section>
+<section id="defadd" class="level4">
+<h4>DEFADD “Trick”</h4>
+<ul>
+<li><p><a href="https://ts2068.groups.io/g/main/message/7821">DEFADD
+Trick</a></p>
+<p>An example of how I did it using regular <code>DEF FN</code> lines in
+BASIC rather than POKEing the essential bytes into memory
+somewhere.</p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/8196">Subroutine
+parameters via DEFADD trick</a></p>
+<p>A slightly less cumbersome way to sort of have parameters for
+subroutines and even return values.</p></li>
+</ul>
+</section>
+<section id="fonts" class="level4">
+<h4>Fonts</h4>
+<ul>
+<li><a href="https://ts2068.groups.io/g/main/message/7886">Tweak
+Font</a></li>
+</ul>
+<p>A slightly twweaked version of the TS2068 ROM font.</p>
+<ul>
+<li><a href="https://ts2068.groups.io/g/main/message/7885">TimeSync
+Font</a></li>
+</ul>
+<p>A font for your PC in the style of the TS2068 font. I imagined a font
+that the pixelated font we all know might have been derived from. Even
+though it is basically square, it is quite a bit wider than all the
+other fonts for your computer that you are used to.</p>
+<p>Tim H. has his own take on such a font <a href="https://github.com/timex-sinclair-projects/TS2068-typeface">here</a>.</p>
+</section>
+<section id="misc" class="level4">
+<h4>Misc</h4>
+<ul>
+<li><p><a href="https://ts2068.groups.io/g/main/message/7668">Silversoft
+ZX81 Compiler documentation</a></p>
+<p>Apparently no one had archived this on-line that I could
+find.</p></li>
+<li><p><a href="https://ts2068.groups.io/g/main/message/6368">Header
+utility</a></p>
+<p>I recovered a tape program header reader utility from the Fort Worth
+user group library tape that is made for the TS2068. I modified the
+prompting slightly.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="markdown" class="level1">
+<h1>Markdown</h1>
+<p>Things for the popular easy to use text-based markup format.</p>
+<ul>
+<li><p><a href="https://github.com/ryangray/buttondown">Buttondown</a></p>
+<p>A clean stylesheet accomodating HTML generated with Pandoc.</p></li>
+<li><p><a href="https://github.com/ryangray/doodad">doodad</a></p>
+<p>An Apache thing to dynamically render and serve up Markdown
+pages.</p></li>
+</ul>
+</section>
+<section id="matlab" class="level1">
+<h1>MATLAB</h1>
+<p>Stuff for the commercial science and engineering programming tool.
+Much of these will work on the open source GNU Octave as well.</p>
+<ul>
+<li><p><a href="https://github.com/ryangray/matlab-units">matlab_units</a></p>
+<p>A units library for MATLAB that is more intuitive and can change the
+base units as well as use unit objects for checking dimensional
+correctness. This works on Octave except for the unit objects (it
+subclasses the double type).</p></li>
+</ul>
+</section>
+</body>
+</html>

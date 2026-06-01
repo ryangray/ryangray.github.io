@@ -1,7 +1,7 @@
 ---
 title: Ryan Gray's Projects
 author: Ryan Gray
-css: https://raw.githubusercontent.com/ryangray/buttondown/refs/heads/master/buttondown.css
+css: ../buttondown/buttondown.css
 toc-title: Contents
 ---
 
