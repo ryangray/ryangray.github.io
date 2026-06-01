@@ -5,6 +5,9 @@ css: https://raw.githubusercontent.com/ryangray/buttondown/refs/heads/master/but
 toc-title: Contents
 ---
 
+My GitHub for all my projects is <https://github.com/ryangray>
+
+
 # Retrocomputing
 
 
@@ -12,13 +15,6 @@ toc-title: Contents
 
 When I started to recover my old Sinclair files, I also got into the emulator 
 scene, and started to work on some utilities for the virtual tape formats.
-
-### [Zmakebas](https://github.com/ryangray/zmkakebas)
-
-I have a fork of this utility that converts Sinclair BASIC source from text 
-files to .p or .tap for the ZX81/TS100 and Spectrum/TS2068. This is just for
-pushing bug fixes and maybe enhancements to the upstream project. Several of my 
-utilities produce output intended to be used with it.
 
 ### Sinclair ZX81, Timex Sinclair 1000 and 1500
 
@@ -32,7 +28,7 @@ Christmas. I did quite a bit on it though as I continued to use it some after I
 got the new computer. I was also a member of the Fort Worth TS user group for a
 few years during this time.
 
-#### Emulator P file utilities
+#### Emulator P file (and .tap file) utilities {#zx81-utils}
 
 * [zx81-utils](https://github.com/ryangray/zx81-utils)
 
@@ -57,6 +53,26 @@ few years during this time.
       image formatted for the Timex 1510 cartridge adapter or one of its clones.
     - **dckls** - List or dump the contents of a TS2068 Command Cartridge .dck file.
 
+* TS1510 Cartridge Adapter Emulator P file converter
+
+    Carl Miles made an improved verision of a TS1510 Cartridge Adapter clone
+    which uses custom plug-in EPROM boards with a switch to select from 4 
+    different program stores on it. His version lets you use 16K programs 
+    instead of just 8K programs.
+    
+    I wrote a utility to convert programs in emulator .P files to an 8 or 16K
+    ROM image to burn onto the cartridge EPROM. It uses genrally the same method
+    of a loader machine code program at address 8192, but it is generalized (the
+    originals appear to be specific to each of the four original cartridge 
+    programs) and loads all of the data from the .P file to be more broadly 
+    compatible. It doesn't handle programs that chain load another, like some
+    from QuickSilva that had a loader that configured their hardware add-on then
+    loaded the next file on the tape.
+    
+    This program is `p2ts1510` in my [zx81-utils](#zx81-utils) above. A post on
+    ts2068.groups.io is [here](https://ts2068.groups.io/g/main/message/8027).
+    
+[Zmakebas]: https://github.com/chris-y/zmakebas
 
 ### Sinclair ZX Spectrum, Timex Sinclair 2068
 
@@ -66,6 +82,9 @@ learned the new system and had enough software to use it well.
 
 During a break between my undergraduate and graduate degrees, I revisited the
 Sinclair machines to work on machine code and write a game.
+
+See also: my [zx81-utils](#zx81-utils) above as it has some utilities involving
+.tap files.
 
 #### My Original BASIC Programs
 
@@ -90,10 +109,59 @@ continue to work on.
     then. I've since sped up some things with machine code, and made a version that
     runs under the OS-64 system.
 
-* Thief (coming soon)
+* [Thief](https://github.com/ryangray/thief)
 
     A game inspired by Lode Runner but is way simpler and you play against the
     clock. There are 6 levels, and there is a built-in level creator. 
+    
+    After recovering it, I immediately modified it slightly to fix a few things 
+    and make it a bit faster. I came back to it later and upgraded it to have
+    color using the [DEFADD trick](#defadd).
+    
+
+* [TS2068 Calendar Printer](https://github.com/ryangray/ts-calprint)
+
+    I re-created my calendar printer for the TS2068 from recovering the calendar 
+    routine and a font it used back in the day. I've also given examples of how
+    to use Imagemagick to make PDFs from Fuse.
+
+    - [The 2026 calendar I made with it](https://ts2068.groups.io/g/main/message/8907)
+    - [The alternate images 2026 calendar](https://ts2068.groups.io/g/main/message/8917)
+    - [The 2025 version with a 4-up print example](https://ts2068.groups.io/g/main/message/7494)
+ 
+
+#### Contributions and Forks of Other Projects
+
+* [Zmakebas](https://github.com/ryangray/zmmakebas)
+
+    I have a fork of this utility that converts Sinclair BASIC source from text 
+    files to .p or .tap for the ZX81/TS100 and Spectrum/TS2068. This is just for
+    pushing bug fixes and maybe enhancements to the upstream project. Several of my 
+    utilities produce output intended to be used with it.
+
+    I've contributed several fixes to mainly fix the ZX81 mode, fix the `ON ERR` 
+    keyword and add the `DELETE` keyword. [Tim H.](https://github.com/ohnosec/zmakebas)
+    had previously added the other TS2068 keywords.
+
+* [`listbasic` from the FUSE Utilities](https://ts2068.groups.io/g/main/message/9130)
+
+    I added support for TS2068 BASIC programs to The FUSE utility `listbasic`.
+    There was some support already, but this also prevents the T and U UDG characters
+    from becoming `SPECTRUM` and `PLAY` keywords, it handles `DELETE` and fixes problems
+    with `ON ERR`. A program option `-t` is added for "Timex" BASIC mode, but it also
+    tries to auto-detect a 2068 program and turn on the mode for the rest of the program.
+    I've yet to work on submitting these mods to the original project.
+
+* [ZX-Spectrumizer image converter](https://ts2068.groups.io/g/main/message/8985)
+
+    I added a monochrome mode to make true monochrome images with black ink and for dark colors
+    and white paper for light colors so that images will print to the monochrome printer
+    correctly. It's best to use the dithering option with it.
+
+* [TS2068 User Manuals with Bookmarks](https://ts2068.groups.io/g/main/message/8271)
+
+    Made bookmarked versions of the color, high-res, and black and white versions of the
+    user manual and added the pages missing from online scans of the black and white one.
 
 
 #### [TS-Pico Commander](https://github.com/ryangray/ts-pico-commander)
@@ -108,6 +176,66 @@ writen in BASIC with a user interface reminiscent of an old file commander for
 DOS. At this point it's mostly just a way to browse the SC card and load
 programs with a little bit of file management.
 
+
+### Articles posted on the [Timex Sinclair 2068 group on groups.io](https://ts2068.groups.io/g/main)
+
+#### General
+
+* [40 Keys: Remembering Where Everything Is](https://ts2068.groups.io/g/main/message/8115)
+
+    A post to maybe give you a way to remeber where most of the keywords are on a TS2068.
+
+#### DEF FN
+
+* [Sinclair BASICs: DEF FN, Beginner](https://ts2068.groups.io/g/main/message/8093)
+
+    An introduction to using DEF FN, a command you may not have really used since the
+    Timex manual hardly mentions it.
+
+* [Recursve DEF FN](https://ts2068.groups.io/g/main/message/7917)
+
+* [DEF FuN](https://ts2068.groups.io/g/main/message/8087)
+
+    Using `DEF FN` in a recursive way to create string trimming functions.
+
+#### DEFADD "Trick" {#defadd}
+
+* [DEFADD Trick](https://ts2068.groups.io/g/main/message/7821)
+
+    An example of how I did it using regular `DEF FN` lines in BASIC rather than
+    POKEing the essential bytes into memory somewhere.
+    
+* [Subroutine parameters via DEFADD trick](https://ts2068.groups.io/g/main/message/8196)
+
+    A slightly less cumbersome way to sort of have parameters for subroutines and even
+    return values.
+
+#### Fonts
+
+* [Tweak Font](https://ts2068.groups.io/g/main/message/7886)
+
+A slightly twweaked version of the TS2068 ROM font.
+
+* [TimeSync Font](https://ts2068.groups.io/g/main/message/7885)
+
+A font for your PC in the style of the TS2068 font. I imagined a font that the
+pixelated font we all know might have been derived from. Even though it is 
+basically square, it is quite a bit wider than all the other fonts for your 
+computer that you are used to.
+
+Tim H. has his own take on such a font [here](https://github.com/timex-sinclair-projects/TS2068-typeface).
+
+#### Misc
+
+* [Silversoft ZX81 Compiler documentation](https://ts2068.groups.io/g/main/message/7668)
+
+    Apparently no one had archived this on-line that I could find.
+
+* [Header utility](https://ts2068.groups.io/g/main/message/6368)
+
+    I recovered a tape program header reader utility from the Fort Worth user
+    group library tape that is made for the TS2068. I modified the prompting
+    slightly.
 
 # Markdown
 
