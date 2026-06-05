@@ -7,6 +7,10 @@ toc-title: Contents
 
 My GitHub for all my projects is <https://github.com/ryangray>
 
+A page of my stuff on David Anderson's site: <https://www.timexsinclair.com/indiv/ryan-gray/>
+
+For links to posts on groups.io, you should look at the whole thread in case 
+there are followup posts with other info or corrections.
 
 # Retrocomputing
 
@@ -38,7 +42,8 @@ few years during this time.
     generating BASIC code in text files designed to be used by Zmakebas to 
     convert to a .p (or .tap) file.
 
-    - **p2txt** - Extracts the BASIC program text from a .p file in a few formats.
+    - **p2txt** - Extracts the BASIC program text from a .p file in a few 
+      formats.
     - **p2speccy** - Converts the BASIC program in a .p file to a ZX Spectrum
       BASIC program in a text file that can be converted to .tap with zmakebas.
     - **hex2rem** - Convert a hex or binary file to a REM statement in a text
@@ -51,9 +56,10 @@ few years during this time.
       .tap file.
     - **p2ts1510** - This is for converting the program in a .p file into a ROM
       image formatted for the Timex 1510 cartridge adapter or one of its clones.
-    - **dckls** - List or dump the contents of a TS2068 Command Cartridge .dck file.
+    - **dckls** - List or dump the contents of a TS2068 Command Cartridge .dck 
+      file.
 
-* TS1510 Cartridge Adapter Emulator P file converter
+* [TS1510 Cartridge Adapter Emulator P file converter](https://github.com/ryangray/zx81-utils#p2ts1510)
 
     Carl Miles made an improved verision of a TS1510 Cartridge Adapter clone
     which uses custom plug-in EPROM boards with a switch to select from 4 
@@ -95,19 +101,19 @@ continue to work on.
 * [QuickFont](https://github.com/ryangray/quickfont)
 
     A font editor for user-defined fonts. This was an early program I wrote the
-    first version of, then enhanced it later after making a UDG editor that emulated
-    the Mac graphical user interface that was new at the time. The new version
-    borrowed most of the look but dropped the joystick-driven pointer operation and
-    drop-down menus.
+    first version of, then enhanced it later after making a UDG editor that 
+    emulated the Mac graphical user interface that was new at the time. The new 
+    version borrowed most of the look but dropped the joystick-driven pointer 
+    operation and drop-down menus.
 
     There was never a standard for a memory location for the fonts, so I just
-    reserved the 768 bytes below the UDG characters at the top of memory. You can
-    always load the fonts to the location of your choice.
+    reserved the 768 bytes below the UDG characters at the top of memory. You 
+    can always load the fonts to the location of your choice.
 
-    Once I recovered this program from my old tapes, I almost immediately began to
-    modify it to speed up and enhance it in the ways I never got around to back
-    then. I've since sped up some things with machine code, and made a version that
-    runs under the OS-64 system.
+    Once I recovered this program from my old tapes, I almost immediately began 
+    to modify it to speed up and enhance it in the ways I never got around to 
+    back then. I've since sped up some things with machine code, and made a 
+    version that runs under the OS-64 system.
 
 * [Thief](https://github.com/ryangray/thief)
 
@@ -129,15 +135,42 @@ continue to work on.
     - [The alternate images 2026 calendar](https://ts2068.groups.io/g/main/message/8917)
     - [The 2025 version with a 4-up print example](https://ts2068.groups.io/g/main/message/7494)
  
+* [Banner Printer](https://ts2068.groups.io/g/main/message/6136)
 
+    Not in Github yet. Another recovered program that I then modified to be able
+    to also print block graphics and UDG characters.
+    
+* [FUDGE](https://ts2068.groups.io/g/main/message/5244)
+
+    The Friendly User Defined Graphics Editor. This was made not long after the 
+    introduction of the Macintosh as a way of both honoring the GUI and mocking
+    it a bit. It uses the joystick of course, and the interaction is a bit 
+    ridiculous which was sort of the point. Thought I remember having a version 
+    where a little man would run onto the screen, jump up and pull down the 
+    menus. 
+    
+* [Tilez](https://ts2068.groups.io/g/main/message/3000)
+
+    I made a version of the classic 15-tile game for the ZX81 back in the day.
+    I haven't recovered it from tape yet, but I did have an old TS2040 printout
+    of it, so I typed it in. I also had made a machine code version of it that I
+    hope to recover at some point. Start of threadis 
+    [here](https://ts2068.groups.io/g/main/message/2627).
+    
+* [Graph-All](https://ts2068.groups.io/g/main/message/2462)
+
+    Make plots of functions that you can type in at a prompt rather than coding 
+    into the program, so you can easily plot multiple functions on the same 
+    plot. It uses `ON ERR` to handle asymptotes and such.
+    
 #### Contributions and Forks of Other Projects
 
 * [Zmakebas](https://github.com/ryangray/zmmakebas)
 
     I have a fork of this utility that converts Sinclair BASIC source from text 
     files to .p or .tap for the ZX81/TS100 and Spectrum/TS2068. This is just for
-    pushing bug fixes and maybe enhancements to the upstream project. Several of my 
-    utilities produce output intended to be used with it.
+    pushing bug fixes and maybe enhancements to the upstream project. Several of
+    my utilities produce output intended to be used with it.
 
     I've contributed several fixes to mainly fix the ZX81 mode, fix the `ON ERR` 
     keyword and add the `DELETE` keyword. [Tim H.](https://github.com/ohnosec/zmakebas)
@@ -146,22 +179,25 @@ continue to work on.
 * [`listbasic` from the FUSE Utilities](https://ts2068.groups.io/g/main/message/9130)
 
     I added support for TS2068 BASIC programs to The FUSE utility `listbasic`.
-    There was some support already, but this also prevents the T and U UDG characters
-    from becoming `SPECTRUM` and `PLAY` keywords, it handles `DELETE` and fixes problems
-    with `ON ERR`. A program option `-t` is added for "Timex" BASIC mode, but it also
-    tries to auto-detect a 2068 program and turn on the mode for the rest of the program.
-    I've yet to work on submitting these mods to the original project.
+    There was some support already, but this also prevents the T and U UDG 
+    characters from becoming `SPECTRUM` and `PLAY` keywords, it handles `DELETE`
+    and fixes problems with `ON ERR`. A program option `-t` is added for "Timex"
+    BASIC mode, but it also tries to auto-detect a 2068 program and turn on the 
+    mode for the rest of the program. I've yet to work on submitting these mods 
+    to the original project.
 
 * [ZX-Spectrumizer image converter](https://ts2068.groups.io/g/main/message/8985)
 
-    I added a monochrome mode to make true monochrome images with black ink and for dark colors
-    and white paper for light colors so that images will print to the monochrome printer
-    correctly. It's best to use the dithering option with it.
+    I added a monochrome mode to make true monochrome images with black ink and 
+    for dark colors and white paper for light colors so that images will print 
+    to the monochrome printer correctly. It's best to use the dithering option 
+    with it.
 
 * [TS2068 User Manuals with Bookmarks](https://ts2068.groups.io/g/main/message/8271)
 
-    Made bookmarked versions of the color, high-res, and black and white versions of the
-    user manual and added the pages missing from online scans of the black and white one.
+    Made bookmarked versions of the color, high-res, and black and white 
+    versions of the user manual and added the pages missing from online scans of
+    the black and white one.
 
 
 #### [TS-Pico Commander](https://github.com/ryangray/ts-pico-commander)
@@ -179,18 +215,24 @@ programs with a little bit of file management.
 
 ### Articles posted on the [Timex Sinclair 2068 group on groups.io](https://ts2068.groups.io/g/main)
 
-#### General
+#### Keys and Characters
 
 * [40 Keys: Remembering Where Everything Is](https://ts2068.groups.io/g/main/message/8115)
 
-    A post to maybe give you a way to remeber where most of the keywords are on a TS2068.
+    A post to maybe give you a way to remeber where most of the keywords are on 
+    a TS2068.
 
+* [TS1000/ZX81 and TS2068/Spectrum Character Cheatsheets](https://ts2068.groups.io/g/main/message/2771)
+
+    Handy one-page character table references with decimal, hex, typing hints,
+    Zmakebas escapes, and more.
+    
 #### DEF FN
 
 * [Sinclair BASICs: DEF FN, Beginner](https://ts2068.groups.io/g/main/message/8093)
 
-    An introduction to using DEF FN, a command you may not have really used since the
-    Timex manual hardly mentions it.
+    An introduction to using DEF FN, a command you may not have really used 
+    since the Timex manual hardly mentions it.
 
 * [Recursve DEF FN](https://ts2068.groups.io/g/main/message/7917)
 
@@ -202,28 +244,62 @@ programs with a little bit of file management.
 
 * [DEFADD Trick](https://ts2068.groups.io/g/main/message/7821)
 
-    An example of how I did it using regular `DEF FN` lines in BASIC rather than
-    POKEing the essential bytes into memory somewhere.
+    An example of how I did it using regular `DEF FN` lines in BASIC rather 
+    than POKEing the essential bytes into memory somewhere.
     
 * [Subroutine parameters via DEFADD trick](https://ts2068.groups.io/g/main/message/8196)
 
-    A slightly less cumbersome way to sort of have parameters for subroutines and even
-    return values.
+    A slightly less cumbersome way to sort of have parameters for subroutines 
+    and even return values.
 
 #### Fonts
 
 * [Tweak Font](https://ts2068.groups.io/g/main/message/7886)
 
-A slightly twweaked version of the TS2068 ROM font.
+    A slightly twweaked version of the TS2068 ROM font.
 
 * [TimeSync Font](https://ts2068.groups.io/g/main/message/7885)
 
-A font for your PC in the style of the TS2068 font. I imagined a font that the
-pixelated font we all know might have been derived from. Even though it is 
-basically square, it is quite a bit wider than all the other fonts for your 
-computer that you are used to.
+    A font for your PC in the style of the TS2068 font. I imagined a font that 
+    the pixelated font we all know might have been derived from. Even though it 
+    is basically square, it is quite a bit wider than all the other fonts for 
+    your computer that you are used to.
 
-Tim H. has his own take on such a font [here](https://github.com/timex-sinclair-projects/TS2068-typeface).
+    Tim H. has his own take on such a font [here](https://github.com/timex-sinclair-projects/TS2068-typeface).
+
+* [ZX Spectrum Tilde and vertical bar characters for the TS2068](https://ts2068.groups.io/g/main/message/2713)
+
+    A small BASIC routine to add to your programs to get the `~` and `|` 
+    characters as UDGs to use.
+
+* [TS1000 "gray" block graphic characters for the TS2068](https://ts2068.groups.io/g/main/message/2712)
+
+    If you got used to using the "gray" block graphics characters on the TS1000
+    and were missing them on your TS2068, this programs them into a few UDG
+    characters. Also handy when you type a TS1000 BASIC program into your TS2068.
+    
+* [Homebrew 64 Column Printing](https://ts2068.groups.io/g/main/message/2547)
+
+    A method of 64 column printing using BASIC and a few fonts. Not real fast, 
+    but better than other examples I've seen.
+
+#### Tape Recovery
+
+* [Fort Worth User Group T/S 2068 Library Tape Archiving Process](https://ts2068.groups.io/g/main/message/2509)
+
+    In the middle of the thread, my post of recovering programs from side A of
+    my copy of this tape from back in the day.
+
+* [Example of Using Audacity](https://ts2068.groups.io/g/main/message/2548)
+
+    Some basic tips on using the free audio editing tool Audacity to help you
+    get started. I found that you might only have to do a little bit for your
+    TS2068 audio before loading it into the Fuse emulator as it is *very* good
+    at processing the audio internally to read the data. It's better than the 
+    stand-alone command line tools in the [Fuse Utilities][Fuse] and [TZX Tools][].
+
+[Fuse]: https://fuse-emulator.sourceforge.net/
+[TZX Tools]: https://github.com/shred/tzxtools
 
 #### Misc
 
@@ -236,6 +312,11 @@ Tim H. has his own take on such a font [here](https://github.com/timex-sinclair-
     I recovered a tape program header reader utility from the Fort Worth user
     group library tape that is made for the TS2068. I modified the prompting
     slightly.
+
+* [Using a terminal in Spectrum emulation in Fuse to log in to your Linux computer](https://ts2068.groups.io/g/main/message/5660)
+
+    Connecting the Interface 1 serial port in Fuse to FIFO pipes in Linux which
+    are connected to a terminal.
 
 # Markdown
 
